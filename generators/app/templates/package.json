@@ -1,0 +1,22 @@
+{
+  "name": "firstProject",
+  "version": "0.0.1",
+  "description": "d",
+  "homepage": "",
+  "author": {
+    "name": "fangyuan.yzh",
+    "email": "fangyuan.yzh@taobao.com",
+    "url": ""
+  },
+  "files": [
+    "generators"
+  ],
+  
+  "dependencies": {
+    "react-timer-mixin": "0.13.3",
+    "@ali/AK":"git+http://gitlab.alibaba-inc.com/aic/RN-AK.git"
+  },
+  "devDependencies": {
+    "rn-core": "~0.2.3"
+  } 
+}
