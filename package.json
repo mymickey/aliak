@@ -1,12 +1,12 @@
 {
   "name": "generator-aliak",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "description": "",
   "homepage": "",
   "author": {
     "name": "fangyuan.yzh",
     "email": "fangyuan.yzh@taobao.com",
-    "url": ""
+    "url": "http://github.com/mymickey"
   },
   "files": [
     "generators"
