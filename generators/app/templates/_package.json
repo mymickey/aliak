@@ -1,16 +1,14 @@
 {
-  "name": "firstProject",
+  "name": "<%=projectName%>",
   "version": "0.0.1",
-  "description": "d",
+  "description": "<%=projectName%>",
   "homepage": "",
   "author": {
     "name": "fangyuan.yzh",
-    "email": "fangyuan.yzh@taobao.com",
+    "email": "fangyuan.yzh@alibaba-inc.com",
     "url": ""
   },
-  "files": [
-    "generators"
-  ],
+  
   
   "dependencies": {
     "react-timer-mixin": "0.13.3",

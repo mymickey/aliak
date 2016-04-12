@@ -1,5 +1,14 @@
 'use strict';
 var React = require('react-native');
+var Btn = require('./Button')
+var ToastBtn = require('./toast')
+var NavTipBtn = require('./navTip')
+var PickerBtn = require('./picker')
+var PushBtn = require('./push')
+var PushBtn2 = require('./push2')
+var SliderBtn = require('./slider')
+var IconfontBtn = require('./iconfont')
+
 var {
   AppRegistry,
   StyleSheet,
@@ -8,7 +17,8 @@ var {
   Text,
   TouchableOpacity,
   Platform,
-  Alert
+  Alert,
+  ScrollView,
 } = React;
 var AK = require('@ali/AK');
 var {
@@ -17,35 +27,49 @@ var {
     Util,
     DA
   } = AK;
+var Dimensions = require('Dimensions');
+var windowSize = Dimensions.get('window');
 
 var Hello = React.createClass({
 	statics:{
       navbarPassProps:{
         statusBarColor:'black',
         style: {},
-        buttons:[{text:'edit',name:'edit'}],
         title:'title'
       }
     },
-    onNavBtnPress:function   (nav,btnName,route) {
-      Alert.alert(
-              '提示',
-              '温馨提示',
-              [
-                {text:'取消'},
-                {text: '确定', onPress: function(){}},
-              ]
-            );
-    },
+    
    render:function(){
-    return <View style={styles.container}><Text style={{color:'#000'}}>hello</Text></View>
+    return (<View style={styles.container}>
+          <ScrollView contentContainerStyle={styles.scrollView} scrollEventThrottle={16} automaticallyAdjustContentInsets={false}>
+
+            <ToastBtn />
+            <NavTipBtn />
+            <PickerBtn />
+            <PushBtn />
+            <PushBtn2 />
+            <SliderBtn />
+            <IconfontBtn />
+
+          </ScrollView>
+        </View>)
    } 
 });
 var styles = StyleSheet.create({
+    scrollView:{
+      flex:1,
+      paddingLeft:20,paddingRight:20,
+      width:windowSize.width,
+      // flexDirection:'column',
+
+    },
     container: {
+        paddingTop:64,
         flex: 1,
         justifyContent:'center',
-        alignItems:'center'
+        alignItems:'center',
+
+        flexDirection:'column',
     }
 });
 module.exports = Hello;
