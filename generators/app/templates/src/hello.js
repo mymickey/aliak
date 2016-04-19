@@ -8,6 +8,7 @@ var PushBtn = require('./push')
 var PushBtn2 = require('./push2')
 var SliderBtn = require('./slider')
 var IconfontBtn = require('./iconfont')
+var VideoBtn = require('./video')
 
 var {
   AppRegistry,
@@ -50,7 +51,7 @@ var Hello = React.createClass({
             <PushBtn2 />
             <SliderBtn />
             <IconfontBtn />
-
+            <VideoBtn />
           </ScrollView>
         </View>)
    } 

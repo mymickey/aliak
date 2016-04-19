@@ -51,9 +51,14 @@ var Panel = React.createClass({
     currentIconCode = iconCode1 == currentIconCode ? iconCode2 : iconCode1;
     navbar.setButtons([{text:['编辑','完成'],name:'edit'},{iconfont:currentIconCode,name:'icon'}])
   },
+  setTitle:function(){
+    var navbar = this.props.getNavbarView(this);
+    navbar.setTitle('changedTitle')
+  },
   render:function(){
     return (<View style={styles.container}>
         <Text>{'参数传递:'}{this.props.args}</Text>
+        <Btn text="修改title" onPress={this.setTitle} />
         <Btn text="修改iconfont" onPress={this.didChangeNavIconfont} />
         <Btn text="禁用导航编辑按钮" onPress={this.disableRightBtnByName} />
         <Btn text="移除icon" onPress={this.removeIconfont} />
