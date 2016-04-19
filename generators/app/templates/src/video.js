@@ -20,6 +20,7 @@ var DemoVideo = React.createClass({
 	      navbarPassProps:{
 	        statusBarColor:'black',
 	        buttons:[],
+	        barType:'transitional',
 	        title:'video'
 	      }
 	  },
